@@ -8,11 +8,31 @@
   font-weight: 500;
 }
 
-.placeholder {
-  min-height: 200px;
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
   background-color: white;
+  border-radius: 8px;
+}
+
+.tHeader,
+.infoProduct {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tHeader {
+  font-weight: 500;
+}
+
+.empty {
+  padding: 24px;
+  background-color: #f9fafb;
   border: 1px dashed #d1d5db;
   border-radius: 8px;
-  display: grid;
-  place-items: center;
 }
