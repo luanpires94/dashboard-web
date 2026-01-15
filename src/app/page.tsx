@@ -1,9 +1,5 @@
-export default function Home() {
-  return (
-    <div>
-      <main>
-        <h1>Home</h1>
-      </main>
-    </div>
-  );
+import { DashboardPage } from "../components/layout/DashboardPage";
+
+export default function Page() {
+  return <DashboardPage />;
 }

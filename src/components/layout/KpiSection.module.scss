@@ -1,0 +1,22 @@
+.section {
+  display: grid;
+  gap: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}

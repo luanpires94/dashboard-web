@@ -1,0 +1,18 @@
+.section {
+  display: grid;
+  gap: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.placeholder {
+  min-height: 200px;
+  background-color: white;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+}
