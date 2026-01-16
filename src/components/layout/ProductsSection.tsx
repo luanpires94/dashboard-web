@@ -29,7 +29,7 @@ export function ProductsSection({ products }: ProductsSectionProps) {
           <thead>
             <tr>
               <th className={styles.tHeader} scope="col">
-                Produto
+                Nome do Produto
               </th>
               <th className={styles.tHeader} scope="col">
                 Categoria

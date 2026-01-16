@@ -9,7 +9,6 @@ export async function DashboardPage() {
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Dashboard</h1>
-
       <KpiSection products={products} />
       <ProductsSection products={products} />
     </section>
