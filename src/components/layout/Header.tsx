@@ -46,7 +46,10 @@ export function Header() {
         )}
       </div>
 
-      <div className={styles.user}>Usuário</div>
+      <div className={styles.user}>
+        <img src="images/avatar.png" alt="admin" className={styles.avatar} />
+        <span className={styles.username}>Admin</span>
+      </div>
     </div>
   );
 }
