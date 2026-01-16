@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import styles from "./DashboardPage.module.scss";
+import styles from "./dashboard.module.scss";
 import { KpiSection } from "./KpiSection";
 import { ProductsSection } from "./ProductsSection";
 import { getProducts } from "../../services/products.service";
@@ -55,7 +55,7 @@ export function DashboardPage() {
   }
 
   return (
-    <section className={styles.container}>
+    <section className={styles.dashboardContainer}>
       <h1 className={styles.title}>Dashboard</h1>
 
       <KpiSection products={filteredProducts} />

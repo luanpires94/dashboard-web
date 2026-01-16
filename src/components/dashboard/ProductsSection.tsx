@@ -1,4 +1,4 @@
-import styles from "./ProductsSection.module.scss";
+import styles from "./dashboard.module.scss";
 import { Product } from "../../services/products.types";
 
 type ProductsSectionProps = {
@@ -19,8 +19,11 @@ export function ProductsSection({ products }: ProductsSectionProps) {
   }
 
   return (
-    <section aria-labelledby="products-title" className={styles.section}>
-      <h2 id="products-title" className={styles.title}>
+    <section
+      aria-labelledby="products-title"
+      className={styles.productsSection}
+    >
+      <h2 id="products-title" className={styles.productsTitle}>
         Produtos
       </h2>
 

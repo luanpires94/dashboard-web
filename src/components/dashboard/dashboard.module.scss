@@ -1,0 +1,114 @@
+/* Dashboard Page */
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  max-width: 1200px;
+  padding: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* KPI Section */
+
+.kpiSection {
+  display: grid;
+  gap: 16px;
+}
+
+.kpiTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.kpiCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+
+  min-height: 80px;
+}
+
+.kpiCard strong {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.kpiCard span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/*Products Section */
+
+.productsSection {
+  display: grid;
+  gap: 16px;
+}
+
+.productsTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.theader {
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.infoProduct {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.empty {
+  padding: 24px;
+  background-color: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .productsTitle,
+  .kpiTitle {
+    font-size: 16px;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+}
