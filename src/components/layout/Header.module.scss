@@ -10,6 +10,26 @@
 .search input {
   width: 100%;
   max-width: 320px;
+
+  padding: 8px 12px;
+  font-size: 14px;
+
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search input::placeholder {
+  color: #9ca3af;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
 @media (max-width: 480px) {
