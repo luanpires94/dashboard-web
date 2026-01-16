@@ -1,5 +1,5 @@
-import "./globals.scss";
-import { DashboardLayout } from "../components/layout/DashboardLayout";
+import "../../styles/globals.scss";
+import { DashboardLayout } from "../../components/layout/DashboardLayout";
 
 export default function RootLayout({
   children,
