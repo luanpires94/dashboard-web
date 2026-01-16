@@ -16,10 +16,24 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
   padding: 16px;
-  background-color: white;
   border-radius: 8px;
+  background: #fff;
   border: 1px solid #e5e7eb;
+}
+
+.card strong {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card span {
+  font-size: 14px;
+  color: #6b7280;
 }
 
 @media (max-width: 1024px) {
@@ -31,5 +45,9 @@
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
   }
 }
