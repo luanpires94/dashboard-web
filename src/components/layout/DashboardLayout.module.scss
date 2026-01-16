@@ -5,7 +5,6 @@
   grid-template-areas:
     "header header"
     "sidebar main";
-
   min-height: 100vh;
 }
 
@@ -23,4 +22,15 @@
   grid-area: main;
   padding: 24px;
   background-color: #f9fafb;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px auto 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main";
+  }
 }
