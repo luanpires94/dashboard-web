@@ -13,8 +13,17 @@
 }
 
 @media (max-width: 480px) {
-  .header {
-    grid-template-columns: 1fr;
-    gap: 8px;
+  .logo {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .user {
+    font-size: 14px;
+    opacity: 0.8;
   }
 }
