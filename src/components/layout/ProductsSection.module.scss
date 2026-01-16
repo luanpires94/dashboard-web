@@ -36,3 +36,9 @@
   border: 1px dashed #d1d5db;
   border-radius: 8px;
 }
+
+@media (max-width: 480px) {
+  .table {
+    font-size: 14px;
+  }
+}
