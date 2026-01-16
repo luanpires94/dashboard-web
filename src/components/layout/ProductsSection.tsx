@@ -28,16 +28,16 @@ export function ProductsSection({ products }: ProductsSectionProps) {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th className={styles.tHeader} scope="col">
-                Nome do Produto
+              <th scope="col" className={styles.theader}>
+                Produto
               </th>
-              <th className={styles.tHeader} scope="col">
+              <th scope="col" className={styles.theader}>
                 Categoria
               </th>
-              <th className={styles.tHeader} scope="col">
+              <th scope="col" className={styles.theader}>
                 Preço
               </th>
-              <th className={styles.tHeader} scope="col">
+              <th scope="col" className={styles.theader}>
                 Estoque
               </th>
             </tr>

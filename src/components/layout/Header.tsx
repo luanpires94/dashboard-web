@@ -8,7 +8,8 @@ export function Header() {
   const pathname = usePathname();
   const showControls = pathname === "/";
 
-  const { search, setSearch, category, setCategory } = useDashboard();
+  const { search, setSearch, category, setCategory, categories } =
+    useDashboard();
 
   return (
     <div className={styles.header}>
@@ -28,17 +29,18 @@ export function Header() {
             </form>
 
             <select
+              className={styles.select}
               aria-label="Filtrar por categoria"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className={styles.select}
             >
               <option value="all">Todas</option>
-              <option value="smartphones">Smartphones</option>
-              <option value="laptops">Laptops</option>
-              <option value="fragrances">Fragrâncias</option>
-              <option value="skincare">Skincare</option>
-              <option value="groceries">Mercado</option>
+
+              {categories.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat}
+                </option>
+              ))}
             </select>
           </div>
         )}

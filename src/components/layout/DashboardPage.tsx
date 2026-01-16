@@ -13,19 +13,25 @@ export function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const { search, category } = useDashboard();
+  const { search, category, setCategories } = useDashboard();
 
   useEffect(() => {
     getProducts()
       .then((data) => {
         setProducts(data.products);
+
+        const uniqueCategories = Array.from(
+          new Set(data.products.map((p) => p.category))
+        );
+
+        setCategories(uniqueCategories);
         setLoading(false);
       })
       .catch(() => {
         setError(true);
         setLoading(false);
       });
-  }, []);
+  }, [setCategories]);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -40,8 +46,13 @@ export function DashboardPage() {
     });
   }, [products, search, category]);
 
-  if (loading) return <p>Carregando...</p>;
-  if (error) return <p>Erro ao carregar produtos.</p>;
+  if (loading) {
+    return <p>Carregando...</p>;
+  }
+
+  if (error) {
+    return <p>Erro ao carregar produtos.</p>;
+  }
 
   return (
     <section className={styles.container}>

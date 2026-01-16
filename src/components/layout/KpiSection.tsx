@@ -9,7 +9,9 @@ export function KpiSection({ products }: KpiSectionProps) {
   const totalProducts = products.length;
 
   const averagePrice =
-    products.reduce((sum, p) => sum + p.price, 0) / totalProducts;
+    totalProducts > 0
+      ? products.reduce((sum, p) => sum + p.price, 0) / totalProducts
+      : 0;
 
   const totalStock = products.reduce((sum, p) => sum + p.stock, 0);
 

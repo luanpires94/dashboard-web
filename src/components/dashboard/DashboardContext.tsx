@@ -7,6 +7,8 @@ type DashboardContextData = {
   setSearch: (value: string) => void;
   category: string;
   setCategory: (value: string) => void;
+  categories: string[];
+  setCategories: (value: string[]) => void;
 };
 
 const DashboardContext = createContext<DashboardContextData | undefined>(
@@ -20,10 +22,18 @@ type DashboardProviderProps = {
 export function DashboardProvider({ children }: DashboardProviderProps) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
+  const [categories, setCategories] = useState<string[]>([]);
 
   return (
     <DashboardContext.Provider
-      value={{ search, setSearch, category, setCategory }}
+      value={{
+        search,
+        setSearch,
+        category,
+        setCategory,
+        categories,
+        setCategories,
+      }}
     >
       {children}
     </DashboardContext.Provider>
