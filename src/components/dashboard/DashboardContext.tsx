@@ -5,6 +5,8 @@ import { createContext, useContext, useState } from "react";
 type DashboardContextData = {
   search: string;
   setSearch: (value: string) => void;
+  category: string;
+  setCategory: (value: string) => void;
 };
 
 const DashboardContext = createContext<DashboardContextData | undefined>(
@@ -17,9 +19,12 @@ type DashboardProviderProps = {
 
 export function DashboardProvider({ children }: DashboardProviderProps) {
   const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("all");
 
   return (
-    <DashboardContext.Provider value={{ search, setSearch }}>
+    <DashboardContext.Provider
+      value={{ search, setSearch, category, setCategory }}
+    >
       {children}
     </DashboardContext.Provider>
   );
