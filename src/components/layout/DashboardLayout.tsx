@@ -1,6 +1,7 @@
 import styles from "./DashboardLayout.module.scss";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
+import { DashboardProvider } from "../dashboard/DashboardContext";
 
 type DashboardLayoutProps = {
   children: React.ReactNode;
@@ -8,16 +9,18 @@ type DashboardLayoutProps = {
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <div className={styles.layout}>
-      <header className={styles.header}>
-        <Header />
-      </header>
+    <DashboardProvider>
+      <div className={styles.layout}>
+        <header className={styles.header}>
+          <Header />
+        </header>
 
-      <aside className={styles.sidebar}>
-        <Sidebar />
-      </aside>
+        <aside className={styles.sidebar}>
+          <Sidebar />
+        </aside>
 
-      <main className={styles.main}>{children}</main>
-    </div>
+        <main className={styles.main}>{children}</main>
+      </div>
+    </DashboardProvider>
   );
 }
