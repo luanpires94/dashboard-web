@@ -18,7 +18,9 @@
   border: 1px solid #d1d5db;
   background-color: #f9fafb;
 
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .search input::placeholder {
@@ -30,6 +32,20 @@
   border-color: #2563eb;
   background-color: #fff;
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.logoImage:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 480px) {

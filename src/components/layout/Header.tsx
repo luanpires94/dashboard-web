@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.scss";
 import { useDashboard } from "../dashboard/DashboardContext";
+import Link from "next/link";
 
 export function Header() {
   const pathname = usePathname();
@@ -13,7 +14,17 @@ export function Header() {
 
   return (
     <div className={styles.header}>
-      <div className={styles.logo}>Dashboard</div>
+      <div className={styles.logo}>
+        <Link href="/" aria-label="Ir para o Dashboard">
+          <img
+            src="https://png.pngtree.com/png-vector/20230302/ourmid/pngtree-dashboard-line-icon-vector-png-image_6626604.png"
+            width={50}
+            height={50}
+            alt="Dashboard"
+            className={styles.logoImage}
+          />
+        </Link>
+      </div>
 
       <div className={styles.center}>
         {showControls && (
